@@ -5,9 +5,11 @@
 ## Breakdown of Tasks Successfully Completed for Project
 
 ### Create AWS Infrastructure
-- Created a **VPC**.
-- Created two subnets: `WebSubnet` and `DBSubnet`.
+- Created a **VPC**
+-<img width="694" alt="vpc created via bash script" src="https://github.com/user-attachments/assets/7033e69c-4c83-4bc4-b943-f5372f06c897" />
+- <img width="957" alt="vpc" src="https://github.com/user-attachments/assets/f1cfe4c1-c5ec-4ddb-bc3b-f00eae642e33" />
 
+- Created two subnets: `WebSubnet` and `DBSubnet`.
 ### Create Two IAM Groups
 - Created IAM groups: `WebAdmins` and `DBAdmins`.
 
