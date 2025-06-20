@@ -6,7 +6,7 @@
 
 ### 1. Create AWS Infrastructure
 
-- Created a **VPC**
+- Create a **VPC**
 
 <img width="475" alt="vpc created via bash script showing state" src="https://github.com/user-attachments/assets/7953247c-ea22-4805-bf48-df9e1816c183" />
 
