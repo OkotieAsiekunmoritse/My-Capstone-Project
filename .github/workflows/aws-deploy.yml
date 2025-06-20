@@ -26,3 +26,8 @@ jobs:
           bash scripts/create_iam_groups.sh
           bash scripts/add_users_to_groups.sh
           bash scripts/add_iam_policy.sh
+
+      - name: Run cleanup scripts
+        if: success()
+        run: bash scripts/clean_up.sh
+        
