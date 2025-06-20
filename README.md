@@ -4,7 +4,7 @@
 
 ## Breakdown of Tasks Successfully Completed for Project
 
-### Create AWS Infrastructure
+### 1. Create AWS Infrastructure
 
 - Created a **VPC**
 
@@ -22,15 +22,21 @@
  <img width="956" alt="subnets" src="https://github.com/user-attachments/assets/7253b2d3-9aa8-4635-8fbd-48e736afe8ab" />
 
 
-### Create Two IAM Groups
+---
+
+
+### 2. Create Two IAM Groups
+
 - Created IAM groups: `WebAdmins` and `DBAdmins`.
 
 <img width="462" alt="IAM Groups created via bashscript" src="https://github.com/user-attachments/assets/f13e2507-e358-402c-87fd-dd75bced900d" />
 
 <img width="959" alt="IAM groups created" src="https://github.com/user-attachments/assets/87059672-1dca-4f98-81ff-b205b471ee68" />
 
+---
 
-### Assign Roles to DBAdmins
+### 3.  Assign Roles to DBAdmins
+
 - Attached **read-only policies** to `DBAdmins` for subnet resources.
 
 <img width="668" alt="Attach ReadOnlyAccess policy to DBAdmins via bashscript" src="https://github.com/user-attachments/assets/003f5d31-2403-402c-87c7-a32e26aa8374" />
@@ -38,8 +44,11 @@
 
 <img width="957" alt="DBAdmins displaying its permission policy" src="https://github.com/user-attachments/assets/d4f17ab0-c32a-4a97-8f07-56839bbafe3f" />
 
+---
 
-### Add Test Users
+
+### 4.  Create Test Users and Add to IAM Groups
+
 - Created test users: `Tom`, `Jerry`, `Joseph`, and `Mary`.
   
 <img width="632" alt="Create test users for IAM Groups via bashscript" src="https://github.com/user-attachments/assets/d0a54d8d-9017-48e9-ab41-6bcc76c5c542" />
@@ -48,6 +57,7 @@
 
 
 - Added `Tom` and `Jerry` to `WebAdmins`.
+  
 - Added `Joseph` and `Mary` to `DBAdmins`.
   
 <img width="400" alt="Add users to IAM Groups via bash script" src="https://github.com/user-attachments/assets/35e16c0c-03f1-4636-b79d-fb84ad4bbc0b" />
@@ -57,7 +67,7 @@
 
 ---
 
-##  CI/CD Pipeline – GitHub Actions
+##  5. CI/CD Pipeline – Using GitHub Actions
 
 
 This project uses **GitHub Actions** to automatically deploy the infrastructure.
