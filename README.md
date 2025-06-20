@@ -7,8 +7,9 @@
 ### Create AWS Infrastructure
 
 - Created a **VPC**
-  
--<img width="694" alt="vpc created via bash script" src="https://github.com/user-attachments/assets/7033e69c-4c83-4bc4-b943-f5372f06c897" />
+
+<img width="475" alt="vpc created via bash script showing state" src="https://github.com/user-attachments/assets/7953247c-ea22-4805-bf48-df9e1816c183" />
+
 
 <img width="957" alt="vpc" src="https://github.com/user-attachments/assets/f1cfe4c1-c5ec-4ddb-bc3b-f00eae642e33" />
 
@@ -32,6 +33,10 @@
 ### Assign Roles to DBAdmins
 - Attached **read-only policies** to `DBAdmins` for subnet resources.
 
+<img width="668" alt="Attach ReadOnlyAccess policy to DBAdmins via bashscript" src="https://github.com/user-attachments/assets/003f5d31-2403-402c-87c7-a32e26aa8374" />
+
+
+<img width="957" alt="DBAdmins displaying its permission policy" src="https://github.com/user-attachments/assets/d4f17ab0-c32a-4a97-8f07-56839bbafe3f" />
 
 
 ### Add Test Users
@@ -47,12 +52,13 @@
   
 <img width="400" alt="Add users to IAM Groups via bash script" src="https://github.com/user-attachments/assets/35e16c0c-03f1-4636-b79d-fb84ad4bbc0b" />
 
-
+<img width="953" alt="DBAdmins displaying its users" src="https://github.com/user-attachments/assets/14cbfcd0-ea54-4309-ac4b-f2b4982a594c" />
 
 
 ---
 
 ##  CI/CD Pipeline – GitHub Actions
+
 
 This project uses **GitHub Actions** to automatically deploy the infrastructure.
 
@@ -61,6 +67,14 @@ This project uses **GitHub Actions** to automatically deploy the infrastructure.
   - `scripts/create_iam_groups.sh`
   - `scripts/assign_policies.sh`
   - `scripts/add_users_to_groups.sh`
+
+<img width="958" alt="Deployment of yml file 1a" src="https://github.com/user-attachments/assets/d3709e25-077d-43f3-9ee4-e1ec627df21d" />
+
+<img width="952" alt="Deployment of yml file a" src="https://github.com/user-attachments/assets/8ca59c6a-4b65-4843-8ea4-527f51119fea" />
+
+<img width="956" alt="FinalDeploymentlog" src="https://github.com/user-attachments/assets/99d67f03-3252-4777-b8ef-c66e3f17173a" />
+
+
 
 ---
 
