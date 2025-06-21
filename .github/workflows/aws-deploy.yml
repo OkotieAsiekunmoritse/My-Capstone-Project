@@ -31,6 +31,6 @@ jobs:
           bash scripts/add_iam_policy.sh
 
       - name: Final clean_up scripts
-        if: ${{ github.event.inputs.runCleanup == 'true' }}
+        if: ${{ github.event.inputs.runCleanup == 'true' }} # When you run the workflow manually via GitHub, you'll get a dropdown option to choose whether to run cleanup
         run: bash scripts/clean_up.sh
         
