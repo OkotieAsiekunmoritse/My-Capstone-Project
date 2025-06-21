@@ -20,7 +20,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Run cleanup
+      - name: Run clean_up
         run: bash scripts/clean_up.sh
 
       - name: Run deployment scripts
@@ -30,6 +30,7 @@ jobs:
           bash scripts/add_users_to_groups.sh
           bash scripts/add_iam_policy.sh
 
-      - name: Final cleanup scripts
+      - name: Final clean_up scripts
+        if: ${{ github.event.inputs.runCleanup == 'true' }}
         run: bash scripts/clean_up.sh
         
