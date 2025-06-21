@@ -20,6 +20,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
+      - name: Run cleanup
+        run: bash scripts/clean_up.sh
+
       - name: Run deployment scripts
         run: |
           bash scripts/create_vpc_create_subnets.sh
@@ -27,7 +30,6 @@ jobs:
           bash scripts/add_users_to_groups.sh
           bash scripts/add_iam_policy.sh
 
-      - name: Run cleanup scripts
-        if: success()
+      - name: Final cleanup scripts
         run: bash scripts/clean_up.sh
         
