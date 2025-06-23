@@ -11,7 +11,7 @@ To automate the setup of secure access controls using AWS CLI and Bash scripting
 
 - Create a **VPC**
 
-I created a custom VPC with a defined CIDR block using AWS CLI, which serves as the foundational layer for the network infrastructure. It is necessary because it provides full control over networking and security configurations.
+I created a VPC with a defined CIDR block using AWS CLI, which serves as the foundational layer for the network infrastructure. It is necessary because it provides full control over networking and security configurations.
 
 <img width="285" alt="vpc creation" src="https://github.com/user-attachments/assets/c0f2ebaf-1259-471a-ab18-0ba424eecf52" />
 
@@ -124,7 +124,8 @@ Using CI/CD Integration, I set up a basic pipeline using that:
 
 ## Cleanup Script
 
-To remove all resources, run:
+I created a Bash script that revokes roles, removes users from groups, and deletes all resources. By using
+run:
 
 ```bash
 bash scripts/cleanup.sh
