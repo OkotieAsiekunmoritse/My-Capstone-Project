@@ -11,13 +11,16 @@ To automate the setup of secure access controls using AWS CLI and Bash scripting
 
 - Create a **VPC**
 
-I created a custom VPC with a defined CIDR block using AWS CLI, which serves as the foundational layer for the network infrastructure. It is necessary because provides full control over networking and security configurations.
+I created a custom VPC with a defined CIDR block using AWS CLI, which serves as the foundational layer for the network infrastructure. It is necessary because it provides full control over networking and security configurations.
 
+<img width="285" alt="vpc creation" src="https://github.com/user-attachments/assets/c0f2ebaf-1259-471a-ab18-0ba424eecf52" />
 
 <img width="475" alt="vpc created via bash script showing state" src="https://github.com/user-attachments/assets/7953247c-ea22-4805-bf48-df9e1816c183" />
 
 
 <img width="957" alt="vpc" src="https://github.com/user-attachments/assets/f1cfe4c1-c5ec-4ddb-bc3b-f00eae642e33" />
+
+---
 
 - Created two subnets: `WebSubnet` and `DBSubnet`.
 
@@ -43,11 +46,24 @@ I created a custom VPC with a defined CIDR block using AWS CLI, which serves as 
 
 <img width="959" alt="IAM groups created" src="https://github.com/user-attachments/assets/87059672-1dca-4f98-81ff-b205b471ee68" />
 
+**WebAdmins Group**:
+
+The users in this group manage resources in the Web subnet.
+
+The users are assigned IAM policies granting them access to EC2 rights to web servers.
+
+**DBAdmins Group**:
+
+The users in this group are responsible for maintaining the organizations database. 
+
+The users ensure databases are secure, available, backedup and working effectively.
+
+
 ---
 
 ### 3.  Assign Roles to DBAdmins
 
-- Attached **read-only policies** to `DBAdmins` for subnet resources.
+- I attached **read-only policies** i.e. AmazonEC2ReadOnlyAccess to `DBAdmins` for subnet resources. Thereby causing its users to be limited to read-only access on DB subnet resources.
 
 <img width="668" alt="Attach ReadOnlyAccess policy to DBAdmins via bashscript" src="https://github.com/user-attachments/assets/003f5d31-2403-402c-87c7-a32e26aa8374" />
 
@@ -59,7 +75,8 @@ I created a custom VPC with a defined CIDR block using AWS CLI, which serves as 
 
 ### 4.  Create Test Users and Add to IAM Groups
 
-- Created test users: `Tom`, `Jerry`, `Joseph`, and `Mary`.
+- Created test users: `Tom`, `Jerry`, `Joseph`, and `Mary` and added them to the respective groups earlier created.
+- Although the users in WebAdmins group have full access to Web subnet EC2s, those in  DBAdmins group have only read-only access to DB subnet resources.
   
 <img width="632" alt="Create test users for IAM Groups via bashscript" src="https://github.com/user-attachments/assets/d0a54d8d-9017-48e9-ab41-6bcc76c5c542" />
 
@@ -81,6 +98,15 @@ I created a custom VPC with a defined CIDR block using AWS CLI, which serves as 
 
 
 This project uses **GitHub Actions** to automatically deploy the infrastructure.
+
+Using CI/CD Integration, I set up a basic pipeline using that:
+
+- Triggers on push.
+
+- Runs the provisioning scripts.
+
+- Executes cleanup on branch deletion.
+
 
 - **Runs the following scripts:**
   - `scripts/create_vpc_and_subnets.sh`
