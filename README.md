@@ -15,8 +15,6 @@ I created a custom VPC with a defined CIDR block using AWS CLI, which serves as 
 
 <img width="285" alt="vpc creation" src="https://github.com/user-attachments/assets/c0f2ebaf-1259-471a-ab18-0ba424eecf52" />
 
-<img width="475" alt="vpc created via bash script showing state" src="https://github.com/user-attachments/assets/7953247c-ea22-4805-bf48-df9e1816c183" />
-
 
 <img width="957" alt="vpc" src="https://github.com/user-attachments/assets/f1cfe4c1-c5ec-4ddb-bc3b-f00eae642e33" />
 
