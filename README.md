@@ -104,10 +104,10 @@ Using CI/CD Integration, I set up a basic pipeline using that:
 
 - Runs the provisioning scripts:
   
-  - `scripts/create_vpc_and_subnets.sh`
-  - `scripts/create_iam_groups.sh`
-  - `scripts/assign_policies.sh`
-  - `scripts/add_users_to_groups.sh`
+  - `bash scripts/create_vpc_and_subnets.sh`
+  - `bash scripts/create_iam_groups.sh`
+  - `bash scripts/assign_policies.sh`
+  - `bash scripts/add_users_to_groups.sh`
 
 - Executes clean_up for deletion.
     
