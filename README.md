@@ -4,14 +4,15 @@
 
 ## Breakdown of Tasks Successfully Completed for Project
 
-To automate the setup of secure access controls using AWS CLI and Bash scripting. This included creating a secure network topology and implementing IAM role-based access to different segments of the infrastructure. 
+To automate the setup of secure access controls using Bash scripting. 
+This included creating a secure network configuration and implementing IAM role-based access to different segments of the infrastructure. 
 
 
 ### 1. Create AWS Infrastructure
 
 - Create a **VPC**
 
-I created a VPC with a defined CIDR block using AWS CLI, which serves as the foundational layer for the network infrastructure. It is necessary because it provides full control over networking and security configurations.
+I created a VPC with a defined CIDR block, which serves as the foundational layer for the network infrastructure. It is necessary because it provides full control over networking and security configurations.
 
 <img width="285" alt="vpc creation" src="https://github.com/user-attachments/assets/c0f2ebaf-1259-471a-ab18-0ba424eecf52" />
 
