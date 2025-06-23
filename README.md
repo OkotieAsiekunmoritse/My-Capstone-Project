@@ -109,7 +109,7 @@ Using CI/CD Integration, I set up a basic pipeline using that:
   - `scripts/assign_policies.sh`
   - `scripts/add_users_to_groups.sh`
 
-  - Executes cleanup on branch deletion.
+- Executes clean_up for deletion.
     
 
 <img width="958" alt="Deployment of yml file 1a" src="https://github.com/user-attachments/assets/d3709e25-077d-43f3-9ee4-e1ec627df21d" />
@@ -122,10 +122,10 @@ Using CI/CD Integration, I set up a basic pipeline using that:
 
 ---
 
-## Cleanup Script
+## Clean_up Script
 
 I created a Bash script that revokes roles, removes users from groups, and deletes all resources. By using
 run:
 
 ```bash
-bash scripts/cleanup.sh
+bash scripts/clean_up.sh
