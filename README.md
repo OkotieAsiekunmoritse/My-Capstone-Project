@@ -4,9 +4,15 @@
 
 ## Breakdown of Tasks Successfully Completed for Project
 
+To automate the setup of secure access controls using AWS CLI and Bash scripting. This included creating a secure network topology and implementing IAM role-based access to different segments of the infrastructure. 
+
+
 ### 1. Create AWS Infrastructure
 
 - Create a **VPC**
+
+I created a custom VPC with a defined CIDR block using AWS CLI, which serves as the foundational layer for the network infrastructure. It is necessary because provides full control over networking and security configurations.
+
 
 <img width="475" alt="vpc created via bash script showing state" src="https://github.com/user-attachments/assets/7953247c-ea22-4805-bf48-df9e1816c183" />
 
@@ -14,6 +20,10 @@
 <img width="957" alt="vpc" src="https://github.com/user-attachments/assets/f1cfe4c1-c5ec-4ddb-bc3b-f00eae642e33" />
 
 - Created two subnets: `WebSubnet` and `DBSubnet`.
+
+ Created two subnets in different Availability Zones for high availability. This is because subnets help segment the VPC for better security and access control. 
+ Web Subnet is the  Public subnet for web servers that may need internet access.
+ DB Subnet is the Private subnet for databases to restrict external access.
   
  <img width="301" alt="Web Subnet Created via bash script showing tags and ID 1" src="https://github.com/user-attachments/assets/cba86dbe-e9a0-455d-af97-1aa331d3e7cf" />
 
