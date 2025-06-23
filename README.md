@@ -23,7 +23,7 @@ I created a VPC with a defined CIDR block, which serves as the foundational laye
 
 - Created two subnets: `WebSubnet` and `DBSubnet`.
 
- Created two subnets in different Availability Zones for high availability. This is because subnets help segment the VPC for better security and access control. 
+ Created two subnets as they help segment the VPC for better security and access control. 
  Web Subnet is the  Public subnet for web servers that may need internet access.
  DB Subnet is the Private subnet for databases to restrict external access.
   
