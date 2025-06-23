@@ -127,5 +127,4 @@ Using CI/CD Integration, I set up a basic pipeline using that:
 I created a Bash script that revokes roles, removes users from groups, and deletes all resources. By using
 run:
 
-```bash
 bash scripts/clean_up.sh
