@@ -102,16 +102,15 @@ Using CI/CD Integration, I set up a basic pipeline using that:
 
 - Triggers on push.
 
-- Runs the provisioning scripts.
-
-- Executes cleanup on branch deletion.
-
-
-- **Runs the following scripts:**
+- Runs the provisioning scripts:
+  
   - `scripts/create_vpc_and_subnets.sh`
   - `scripts/create_iam_groups.sh`
   - `scripts/assign_policies.sh`
   - `scripts/add_users_to_groups.sh`
+
+  - Executes cleanup on branch deletion.
+    
 
 <img width="958" alt="Deployment of yml file 1a" src="https://github.com/user-attachments/assets/d3709e25-077d-43f3-9ee4-e1ec627df21d" />
 
